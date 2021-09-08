@@ -1,107 +1,91 @@
-# Webpack Intro
+# vocab-YOU-lary
 
-[See Live Demo of this Template](https://webpack-5-template.netlify.app)
+In this student assessment, you will be creating an application that allows users to CRUD vocabulary cards, authenticate with Google, and filter.
 
-Webpack is a task runner and a module bundler. It originally started as a module bundler. This means that it takes all of your separate Javascript modules and bundles them together into a single file. Webpack also automates some of the tasks that we have to run every time we change the code. It will automate these tasks so that we are not typing in the same commands every single time.
+## Learning Objectives
+- Single Responsibility Principle (each component/function should have one job)
+- Import/Export modules
+- DOM manipulation with Vanilla JS
+- DOM querying with Vanilla JS
+- Representing data as HTML
+- Usage of semantic HTML5 tags
+- Asynchronous Programming
+- Promises 
 
-## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Other important tidbits](#other-important-tidbits)
-    - [Console messages](#console-messages)
-    - [Including images with webpack](#including-images-with-webpack)
-    - [Importing CSS](#importing-cssscss)
-    - [Using axios](#using-axios)
-    - [Deploying on Netlify](#deploying-on-netlify)
-___
+## REMINDER
+This is NOT A TEST. We are not looking for 100% completion, although if you can make it work completely, then wahoo!
+
+What we are looking for is effort, critical thinking about the concepts, creative thinking to bind the concepts together for a solution, and collaboration with your teammates and instruction team.
+
+If you only get 50% of it complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.
+
+## Tools To Use:
+- Postman for API testing
+- Firebase for database, rules, and authentication
+- Webpack template (Located in your cohort repo)
+- dbdiagram.io for creating your ERD
+- Figma, google slides, or paper for flow charting your application
+- Axios for requests
+- Github projects/milestones for planning out work
+- Bootstrap 5 for styling
+
+Make sure your Developer Tools are open at all times while working on this project. Use the messages provided in the Console to determine what code needs to be fixed or implemented, and use breakpoints in the Sources tab to step through your code as you debug.
 
 ## Get Started
+Use the checkboxes next to each item to keep track of what you have completed.
+- [ ] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
+- [ ] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
+- [ ] Use the webpack template to create the project on your github account
+- [ ] Make sure you are in your `workspace/foundations/exercises` directory
+- [ ] `git clone YOUR_GITHUB_REPO_LINK`
+- [ ] `cd` into the directory
+- [ ] Run `npm install` to install your dependencies
+- [ ] Type `code .` to open the project in VS Code
+- [ ] `npm start` to start your server
+- [ ] Plan your project by creating the tickets you will work through using Github Projects
+- [ ] START CODING!
 
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-![Use this Template](./documentation/usetemplate.png)
+# MVP Requirements
+[MVP Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
+- [ ] An ERD of your data
+- [ ] Use Firebase for DB and authentication
+- [ ] Technical Flow chart (timebox this)
+- [ ] The app has a navigation bar
+  - [ ] A logo
+  - [ ] Logout button
+  - [ ] Create Entry
+  - [ ] Any other options you would like to add
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-![Create Project](./documentation/createproject.png)
+**The most basic requirement for this project is that a user can:**
+- [ ] Login and Logout of the application using Firebase Google Authentication
+- [ ] CREATE a vocabulary entry:
+  - [ ] Title
+  - [ ] Definition
+  - [ ] Language/Tech
+  - [ ] Time submitted - Not on form. Handle in your JS
+  - [ ] user ID - Not on form. Pull from User object.
+- [ ] READ entries
+- [ ] UPDATE entries
+- [ ] DELETE entries
+- [ ] Filter by language/tech
+- [ ] Style your application using your own creativity!
+- [ ] No errors - linters should be clean
 
-3. Clone your new repo to your local machine
-4. Go to the **NEXT** section
+## Stretch 1
+[Stretch 1 Wireframe](https://www.figma.com/file/yZE38QzpoUWELA22gGZJve/Stretch-1)
+- [ ] Allow users to order entries alphabetically, newest, oldest
 
-## Starting the Project
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. Rename the `.sample.env` file to `.env` file. The final file name should be `.env`
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. To start your application, run `npm start`
+## Stretch 2
+[Stretch 2 Wireframe](https://www.figma.com/file/UC3Gi8HFRkZY8OIMOAUgL4/Stretch-2)
+- [ ] Users can search vocabulary entries
+- [ ] Users can only see the vocabulary entries that they created
+- [ ] Users can add Language/Tech to the database and refrerence it on their vocabulary entries
+- [ ] Users can only see the Languages/Tech categories that they created
 
-### If you see this, you are set to go!
-![LIT](./documentation/lit-screen.png)
-
-**NOTES:** 
-- Changes you make to the project will make the browser reload on save...no more hard refresh unless something goes wrong.
-- You will no longer be using the `hs -o` command. To start your server, you will run `npm start`
-
-## Other Important Tidbits
-### Console messages
-From this time forward, you will be expected to have a clean console in order for your assignments to be approved. This means that the use of `console.log` is acceptable **_(debugger is WAY better though)_** while developing, but will throw an error in your console like the image below, but all `logs` will have to be removed. You may use `console.error` and `console.warn` in your code however for messages. These need to all be removed before pushing to production unless they contain vital info for the user/developer.
-
-![not acceptable](./documentation/notacceptable.png)
-
-### Including Images with Webpack
-If you have a folder of local images that you want to load into your code things get a little strange with webpack.  Remember the only way webpack knows about assets is if they are imported into your javascript files.  Even our CSS is not added until those files are imported into our javascript files.  Below is some sample code for how to load a local image file into your project
-
-```js
-import cat from './assets/cat.jpg';
-
-let domString = `<img src=${cat} alt="picture of a cat"/>`;
-
-document.getElementById('cat').innerHTMl = domString;
-```
-
-### Importing CSS/SCSS
-**NOTE:** We will be using SCSS files. They are used the same way your CSS files work, with some added benefits that we will discuss later.
-
-Since Webpack is making the connection to the JS and CSS for us and we are no longer manually adding links or script tags to our HTML, we have to get our styles to the application some way...
-
-Here is how we add our styles using webpack:
-
-```js
-import '../styles/main.scss';
-
-const init = () => {
-  document.querySelector('#app').innerHTML = '<h1>HELLO! You are up and running!</h1>');
-  console.log('YOU ARE UP AND RUNNING!');
-};
-
-init();
-```
-
-### Using Axios
-> For every file you will need to make an XHR request in, you will need to require Axios
-```js
-import axios from 'axios';
-
-const examplePromise = () => {
-  axios.get('http://localhost:3001/example')
-    .then((data) => {
-      console.warn(data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
-```
-
-### Deploying on Netlify
-
-- Build Command: `npm run build`
-- Publish directory: `dist`
-- Add Environmental Variables (NOT REQUIRED for Apps that do not use API Keys, etc)
-    - Any Enviromental variables you are using in your `.env` file should be added to Netlify. 
-        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
-
-- Update Firebase URL Settings
-    - In Firebase under Authentication select sign in methods, scroll to Authorized domains. Add your Netlify URL.
-        
-## More Info and Resources on Webpack
-- Visit the [Webpack documentation](https://webpack.js.org/concepts/) if you want to explore more.
-- [Info on our Webpack Config](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-2-patterns-and-tools/chapters/webpack-configure.md)
+## Stretch 3
+[Stretch 3 Wireframe](https://www.figma.com/file/KgbkfaoRd5F8Q4qZ3G2Bg2/Stretch-3)
+- [ ] Users can mark an entry as public or private
+- [ ] Create a new navigation item called "Community" and on click of this item, users can see all the public entries
+- [ ] If an entry is public, anyone can READ it. If it is private, only the user who created it can see it.
+- [ ] If an entry is public, only the user who created it can CRUD on it
+- [ ] If an entry is public, any user can copy the entry to their own set of entries and then CRUD on the new/copied entry
