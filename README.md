@@ -33,14 +33,14 @@ Make sure your Developer Tools are open at all times while working on this proje
 
 ## Get Started
 Use the checkboxes next to each item to keep track of what you have completed.
-- [ ] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
+- [X] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
 - [ ] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
-- [ ] Use the webpack template to create the project on your github account
-- [ ] Make sure you are in your `workspace/foundations/exercises` directory
-- [ ] `git clone YOUR_GITHUB_REPO_LINK`
-- [ ] `cd` into the directory
-- [ ] Run `npm install` to install your dependencies
-- [ ] Type `code .` to open the project in VS Code
+- [X] Use the webpack template to create the project on your github account
+- [X] Make sure you are in your `workspace/foundations/exercises` directory
+- [X] `git clone YOUR_GITHUB_REPO_LINK`
+- [X] `cd` into the directory
+- [X] Run `npm install` to install your dependencies
+- [X] Type `code .` to open the project in VS Code
 - [ ] `npm start` to start your server
 - [ ] Plan your project by creating the tickets you will work through using Github Projects
 - [ ] START CODING!
