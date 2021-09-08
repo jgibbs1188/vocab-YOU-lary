@@ -1,4 +1,4 @@
-import checkLoginStatus from './helpers/auth';
+import checkLoginStatus from './helpers/router';
 
 import 'bootstrap';
 import '../styles/main.scss';
