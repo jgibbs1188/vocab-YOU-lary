@@ -8,3 +8,20 @@ body {
   text-align: center;
   margin-top: 100px;
 }
+
+// Navbar Styling
+.navbar-image {
+  max-height: 60px;
+  max-width: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+  .nav-create-entry {
+    padding-top: 10px;
+    font-size: large;
+  }
+
+.navbar-right {
+  margin-left: auto;
+  padding-right: 20px;
+}
