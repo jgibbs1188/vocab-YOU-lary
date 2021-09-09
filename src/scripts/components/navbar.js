@@ -1,7 +1,6 @@
 const navBar = () => {
   document.querySelector('#navigation').innerHTML = `
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-4">
-          <a class="navbar-brand title" href="#">Vocab-YOU-lary</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -15,16 +14,18 @@ const navBar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a href="#" class="pull-left navbar-brand navbar-logo">LOGO HERE<img src=""></a> 
+              <li>
+                <h2 class="navbar-brand brand-name fa-pull-left">
+                  <a><img class="navbar-image fa-image" src="https://png.pngitem.com/pimgs/s/8-85755_happy-face-meme-png-awesome-face-no-background.png">Vocab-YOU-lary</a>
+                </h2>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#" id="create-entry">
+                <a class="nav-link nav-create-entry" href="#" id="create-entry">
                   Create New Entry <span class="sr-only">(current)</span>
                 </a>
               </li>
             </ul>
-            <div id="logout-button"></div>
+            <div id="logout-button" class="navbar-right"></div>
           </div>
         </nav>
       `;
