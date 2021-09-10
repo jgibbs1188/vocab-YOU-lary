@@ -3,6 +3,8 @@ import clearDom from '../helpers/data/clearDom';
 const showVocab = (array) => {
   clearDom();
 
+  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-entry-btn">Create An Entry</button>';
+
   array.forEach((item) => {
     document.querySelector('#store').innerHTML += `
       <div class="card">

@@ -20,8 +20,13 @@ const navBar = () => {
                 </h2>
               </li>
               <li class="nav-item active">
-                <a class="nav-link nav-create-entry" href="#" id="create-entry">
-                  Create New Entry <span class="sr-only">(current)</span>
+                <a class="nav-link nav-entry" href="#" id="view-all-entry">
+                  View All Entries <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link nav-entry" href="#" id="favorite-entry">
+                  View Favorites <span class="sr-only">(current)</span>
                 </a>
               </li>
             </ul>
