@@ -1,6 +1,6 @@
 import signOut from '../helpers/auth/signOut';
 import { showVocab } from '../components/vocab';
-import getVocab from '../helpers/data/vocabData';
+import { getVocab } from '../helpers/data/vocabData';
 
 const navigationEvents = (uid) => {
   // LOGOUT BUTTON
@@ -8,7 +8,7 @@ const navigationEvents = (uid) => {
     .addEventListener('click', signOut);
 
   // ALL Cards
-  document.querySelector('#all-books').addEventListener('click', () => {
+  document.querySelector('#view-all-entry').addEventListener('click', () => {
     getVocab(uid).then(showVocab);
   });
 };
