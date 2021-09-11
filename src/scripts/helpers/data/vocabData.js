@@ -39,9 +39,17 @@ const createVocab = (newEntryData) => new Promise((resolve, reject) => {
     .catch((errors) => reject(errors));
 });
 
+// UPDATE VOCAB CARD
+const updateVocab = (vocabObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/vocab/${vocabObj.firebaseKey}.json`, vocabObj)
+    .then(() => getVocab().then(resolve))
+    .catch(reject);
+});
+
 export {
   getVocab,
   createVocab,
   deleteVocab,
-  getSingleVocab
+  getSingleVocab,
+  updateVocab
 };
