@@ -1,17 +1,17 @@
 {
     "-MTpcli73mfiIqW0lpPe": {
         "firebaseKey": "-MTpcli73mfiIqW0lpPe",
-        "name": "javascript",
+        "name": "Javascript",
         "description": "A programming language with functions."
     },
     "-MTpcli9kmjpvbdr-ckb": {
         "firebaseKey": "-MTpcli9kmjpvbdr-ckb",
-        "name": "html",
+        "name": "HTML",
         "description": "A programming language with tags."
     },
     "-MTpcliA_-GtWZHpb8sf": {
         "firebaseKey": "-MTpcliA_-GtWZHpb8sf",
-        "name": "css",
+        "name": "CSS",
         "description": "A programming language with styling."
     }
 }
