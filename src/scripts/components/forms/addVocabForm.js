@@ -44,11 +44,11 @@ const addVocabForm = (obj = {}) => {
     <form id="submit-vocab-form" class="mb-4">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" aria-describedby="vocabName" placeholder="Enter Card Name" value="${obj.title || ''}" required>
+        <input type="text" class="form-control" id="name" aria-describedby="vocabName" placeholder="Enter Card Name" value="${obj.name || ''}" required>
       </div>
       <div class="form-group">
         <label for="language">Language</label>
-        <input type="text" class="form-control" placeholder="Language" id="language">${obj.description || ''}</input>
+        <input type="text" class="form-control" placeholder="Language" id="language" value="${obj.language || ''}"></input>
       </div
       <div class="form-group">
         <label for="description">Description</label>

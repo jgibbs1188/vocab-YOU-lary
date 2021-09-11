@@ -5,14 +5,14 @@ import firebaseConfig from '../../../api/apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
-// GET VOCAB
+// GET VOCAB CARDS
 const getVocab = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/vocab.json`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
 
-// DELETE VOCAB
+// DELETE VOCAB CARD
 const deleteVocab = (firebaseKey) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/vocab/${firebaseKey}.json`)
     .then(() => {
@@ -21,7 +21,14 @@ const deleteVocab = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// CREATE VOCAB
+// GET SINGLE VOCAB CARD
+const getSingleVocab = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocab/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch(reject);
+});
+
+// CREATE VOCAB CARD
 const createVocab = (newEntryData) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/vocab.json`, newEntryData)
     .then((response) => {
@@ -32,4 +39,9 @@ const createVocab = (newEntryData) => new Promise((resolve, reject) => {
     .catch((errors) => reject(errors));
 });
 
-export { getVocab, createVocab, deleteVocab };
+export {
+  getVocab,
+  createVocab,
+  deleteVocab,
+  getSingleVocab
+};
