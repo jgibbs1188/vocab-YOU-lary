@@ -34,42 +34,42 @@ Make sure your Developer Tools are open at all times while working on this proje
 ## Get Started
 Use the checkboxes next to each item to keep track of what you have completed.
 - [X] Setup your firebase project and create the `.env` file with your keys. (Reference the [Firebase videos](https://vimeo.com/showcase/codetracker-firebase) if you need help getting started)
-- [ ] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
+- [X] Plan your project. Take no more than an hour to plan (ERD, Flow Chart, Postman)
 - [X] Use the webpack template to create the project on your github account
 - [X] Make sure you are in your `workspace/foundations/exercises` directory
 - [X] `git clone YOUR_GITHUB_REPO_LINK`
 - [X] `cd` into the directory
 - [X] Run `npm install` to install your dependencies
 - [X] Type `code .` to open the project in VS Code
-- [ ] `npm start` to start your server
-- [ ] Plan your project by creating the tickets you will work through using Github Projects
-- [ ] START CODING!
+- [X] `npm start` to start your server
+- [X] Plan your project by creating the tickets you will work through using Github Projects
+- [X] START CODING!
 
 # MVP Requirements
 [MVP Wireframe](https://www.figma.com/file/IW4jF3GnzCFLYbEXlgFNIZ/MVP)
-- [ ] An ERD of your data
-- [ ] Use Firebase for DB and authentication
+- [X] An ERD of your data
+- [X] Use Firebase for DB and authentication
 - [ ] Technical Flow chart (timebox this)
-- [ ] The app has a navigation bar
-  - [ ] A logo
-  - [ ] Logout button
-  - [ ] Create Entry
-  - [ ] Any other options you would like to add
+- [X] The app has a navigation bar
+  - [X] A logo
+  - [X] Logout button
+  - [X] Create Entry
+  - [X] Any other options you would like to add
 
 **The most basic requirement for this project is that a user can:**
-- [ ] Login and Logout of the application using Firebase Google Authentication
-- [ ] CREATE a vocabulary entry:
-  - [ ] Title
-  - [ ] Definition
-  - [ ] Language/Tech
-  - [ ] Time submitted - Not on form. Handle in your JS
+- [X] Login and Logout of the application using Firebase Google Authentication
+- [X] CREATE a vocabulary entry:
+  - [X] Title
+  - [X] Definition
+  - [X] Language/Tech
+  - [X] Time submitted - Not on form. Handle in your JS
   - [ ] user ID - Not on form. Pull from User object.
-- [ ] READ entries
-- [ ] UPDATE entries
-- [ ] DELETE entries
-- [ ] Filter by language/tech
-- [ ] Style your application using your own creativity!
-- [ ] No errors - linters should be clean
+- [X] READ entries
+- [X] UPDATE entries
+- [X] DELETE entries
+- [X] Filter by language/tech
+- [X] Style your application using your own creativity!
+- [X] No errors - linters should be clean
 
 ## Stretch 1
 [Stretch 1 Wireframe](https://www.figma.com/file/yZE38QzpoUWELA22gGZJve/Stretch-1)

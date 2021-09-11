@@ -1,5 +1,6 @@
 import filterLanguage from '../components/filterLanguage';
 import addVocabForm from '../components/forms/addVocabForm';
+import { newVocab, oldVocab } from '../components/sortVocab';
 import { showVocab } from '../components/vocab';
 import {
   createVocab,
@@ -34,7 +35,7 @@ const domEvents = () => {
         language: document.querySelector('#language').value,
         description: document.querySelector('#description').value,
         favorite: document.querySelector('#favorite').checked,
-        timeSubmitted: new Date()
+        timeEntered: new Date()
       };
 
       createVocab(vocabObject).then((vocabArray) => showVocab(vocabArray));
@@ -56,7 +57,7 @@ const domEvents = () => {
         language: document.querySelector('#language').value,
         description: document.querySelector('#description').value,
         favorite: document.querySelector('#favorite').checked,
-        timeSubmitted: new Date(),
+        timeEntered: new Date(),
         firebaseKey
       };
       updateVocab(vocabObj).then(showVocab);
@@ -84,6 +85,24 @@ const domEvents = () => {
       getVocab().then((vocabArray) => {
         const cssVocabCards = filterLanguage(vocabArray, e.target.id);
         showVocab(cssVocabCards);
+      });
+    }
+
+    if (e.target.id.includes('old')) {
+      e.preventDefault();
+      getVocab().then((vocabCards) => {
+        oldVocab(vocabCards);
+        showVocab(vocabCards);
+        console.warn(vocabCards);
+      });
+    }
+
+    if (e.target.id.includes('new')) {
+      e.preventDefault();
+      getVocab().then((vocabCards) => {
+        newVocab(vocabCards);
+        showVocab(vocabCards);
+        console.warn(vocabCards);
       });
     }
   });

@@ -24,11 +24,6 @@ const navBar = () => {
                   View All Entries <span class="sr-only">(current)</span>
                 </a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link nav-entry" href="#" id="favorite-entry">
-                  View Favorites <span class="sr-only">(current)</span>
-                </a>
-              </li>
             </ul>
             <div id="logout-button" class="navbar-right"></div>
           </div>
