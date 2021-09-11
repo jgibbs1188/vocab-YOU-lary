@@ -1,9 +1,11 @@
+import filterLanguage from '../components/filterLanguage';
 import addVocabForm from '../components/forms/addVocabForm';
 import { showVocab } from '../components/vocab';
 import {
   createVocab,
   deleteVocab,
   getSingleVocab,
+  getVocab,
   updateVocab
 } from '../helpers/data/vocabData';
 
@@ -19,7 +21,7 @@ const domEvents = () => {
       }
     }
 
-    // CLICK EVENT FOR SHOWING FORM FOR ADDING A BOOK
+    // CLICK EVENT FOR SHOWING FORM FOR ADDING A VOCAB CARD
     if (e.target.id.includes('add-entry-btn')) {
       addVocabForm();
     }
@@ -58,6 +60,31 @@ const domEvents = () => {
         firebaseKey
       };
       updateVocab(vocabObj).then(showVocab);
+    }
+
+    // CLICK EVENTS FOR FILTER BUTTONS
+    if (e.target.id.includes('Javascript')) {
+      e.preventDefault();
+      getVocab().then((vocabArray) => {
+        const jsVocabCards = filterLanguage(vocabArray, e.target.id);
+        showVocab(jsVocabCards);
+      });
+    }
+
+    if (e.target.id.includes('HTML')) {
+      e.preventDefault();
+      getVocab().then((vocabArray) => {
+        const htmlVocabCards = filterLanguage(vocabArray, e.target.id);
+        showVocab(htmlVocabCards);
+      });
+    }
+
+    if (e.target.id.includes('CSS')) {
+      e.preventDefault();
+      getVocab().then((vocabArray) => {
+        const cssVocabCards = filterLanguage(vocabArray, e.target.id);
+        showVocab(cssVocabCards);
+      });
     }
   });
 };

@@ -49,10 +49,11 @@ const addVocabForm = (obj = {}) => {
       <div class="form-group">
         <label for="language">Select a Language</label>
         <select name="language" class="form-control" id="language" value="${obj.language || ''}" required>
+          <option value="">Select a Language</option>  
           <option value="Javascript">Javascript</option>        
           <option value="CSS">CSS</option>
           <option value="HTML">HTML</option>
-          </select>
+        </select>
       </div>
       <div class="form-group">
         <label for="description">Description</label>
