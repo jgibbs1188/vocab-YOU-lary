@@ -2,7 +2,7 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: black;
+  background-color: powderblue;
 }
 
 .navbar-dark .navbar-brand {
@@ -50,10 +50,17 @@ body {
     width: 60%;
     margin: auto;
     justify-content: center;
-    color: white;
+    color: darkblue;
 
     #formModal {
       color: black;
+    }
+    .form-group {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .form-submit {
+      padding-top: 5px;
     }
   }
 
@@ -68,11 +75,6 @@ body {
     .card {
       width: 300px;
       margin: 5px;
-
-      .sale-badge {
-        font-size: 1em;
-        background-color: blue;
-      }
     }
 
     .table {
@@ -81,12 +83,6 @@ body {
       margin: 0 auto;
     }
   }
-}
-
-.author-card {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 20%;
 }
 
 // Navbar Styling

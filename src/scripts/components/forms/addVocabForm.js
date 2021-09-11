@@ -47,18 +47,22 @@ const addVocabForm = (obj = {}) => {
         <input type="text" class="form-control" id="name" aria-describedby="vocabName" placeholder="Enter Card Name" value="${obj.name || ''}" required>
       </div>
       <div class="form-group">
-        <label for="language">Language</label>
-        <input type="text" class="form-control" placeholder="Language" id="language" value="${obj.language || ''}"></input>
-      </div
+        <label for="language">Select a Language</label>
+        <select name="language" class="form-control" id="language" value="${obj.language || ''}" required>
+          <option value="Javascript">Javascript</option>        
+          <option value="CSS">CSS</option>
+          <option value="HTML">HTML</option>
+          </select>
+      </div>
       <div class="form-group">
         <label for="description">Description</label>
         <textarea class="form-control" placeholder="Card Description" id="description" style="height: 100px">${obj.description || ''}</textarea>
       </div
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="favorite" ${obj.favorite ? 'checked' : ''}" >
+        <input type="checkbox" class="form-check-input" id="favorite" ${obj.favorite && 'checked'}" >
         <label class="form-check-label" for="favorite">Favorite?</label>
       </div>
-      <div>
+      <div class="form-submit">
         <button type="submit"
             id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="btn btn-primary">Submit Entry</button>
       </div>
