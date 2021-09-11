@@ -5,7 +5,7 @@ import { createVocab, deleteVocab } from '../helpers/data/vocabData';
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     // CLICK EVENT FOR DELETING A BOOK
-    if (e.target.id.includes('delete-book')) {
+    if (e.target.id.includes('delete-vocab')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const [, id] = e.target.id.split('--');
