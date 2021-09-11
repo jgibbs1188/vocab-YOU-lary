@@ -12,20 +12,11 @@ body {
   font-size: 2em;
 }
 
-.cart-items {
-  height: 300px;
-  overflow: scroll;
-}
-
 .grey-box {
   float: left;
   margin: 2px;
   width: 200px;
   height: 200px;
-}
-
-#cart-thumb img {
-  height: 100px;
 }
 
 .logout {
@@ -42,6 +33,11 @@ body {
   align-content: center;
 
   #add-button {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #filters-container {
     margin: 0 auto;
     text-align: center;
   }
@@ -100,4 +96,13 @@ body {
 .navbar-right {
   margin-left: auto;
   padding-right: 20px;
+}
+
+.filter-button-label {
+  font-weight: 500;
+  font-size: larger;
+  color: darkblue;
+}
+.btn-group {
+  margin: 5px;
 }

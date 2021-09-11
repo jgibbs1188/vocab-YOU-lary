@@ -3,12 +3,15 @@ import clearDom from '../helpers/data/clearDom';
 const showVocab = (array) => {
   clearDom();
 
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-entry-btn">Create An Entry</button>';
+  document.querySelector('#add-button').innerHTML += '<button class="btn btn-success btn-lg mb-4" id="add-entry-btn">Create An Entry</button> <div class="filter-button-label">Filter</div>';
+  document.querySelector('#add-button').innerHTML += '<button class="btn btn-group btn-sm btn-outline-dark mb-4" id="Javascript">Javascript</button>';
+  document.querySelector('#add-button').innerHTML += '<button class="btn btn-group btn-sm btn-outline-dark mb-4" id="CSS">CSS</button>';
+  document.querySelector('#add-button').innerHTML += '<button class="btn btn-group btn-sm btn-outline-dark mb-4" id="HTML">HTML</button>';
 
   array.forEach((item) => {
     document.querySelector('#store').innerHTML += `
       <div class="card">
-          <div class="card-body" style="height: 180px;">
+          <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text bold">${item.language}</p>
             <p class="card-text bold">${item.description}</p>
